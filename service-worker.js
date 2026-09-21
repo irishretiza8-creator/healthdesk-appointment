@@ -1,159 +1,77 @@
-const CACHE_NAME = "healthdesk-v3";
+<!DOCTYPE html>
 
-const FILES_TO_CACHE = [
-"./",
-"./index.html",
-"./login.html",
-"./signup.html",
-"./dashboard.html",
-"./bookappointment.html",
-"./myappointment.html",
-"./style.css",
-"./script.js",
-"./service-worker.js"
-];
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>HealthDesk - Sign Up</title> <link rel="stylesheet" href="style.css"> </head> <body>
 
-/* =========================
-INSTALL
-========================= */
+<div class="auth-container">
 
-self.addEventListener("install", event => {
+    <div class="healthdesk-side">
+        <h1>HEALTHDESK</h1>
+    </div>
 
-```
-event.waitUntil(
-    caches.open(CACHE_NAME)
-        .then(cache => {
-            return cache.addAll(FILES_TO_CACHE);
-        })
-);
+    <div class="auth-form">
 
-self.skipWaiting();
-```
+        <h2>Sign Up</h2>
 
-});
+        <form id="signupForm">
 
-/* =========================
-ACTIVATE
-========================= */
+            <label for="name">
+                Full Name
+            </label>
 
-self.addEventListener("activate", event => {
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
 
-```
-event.waitUntil(
+            <label for="signupEmail">
+                Email
+            </label>
 
-    caches.keys().then(cacheNames => {
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+            >
 
-        return Promise.all(
+            <label for="signupPassword">
+                Password
+            </label>
 
-            cacheNames
-                .filter(cacheName => {
-                    return cacheName !== CACHE_NAME;
-                })
-                .map(cacheName => {
-                    return caches.delete(cacheName);
-                })
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+            >
 
-        );
+            <button type="submit">
+                Sign Up
+            </button>
 
-    })
+        </form>
 
-);
+        <p
+            id="signupMessage"
+            class="form-message"
+        ></p>
 
-self.clients.claim();
-```
+        <p class="switch-page">
 
-});
+            Already have an account?
 
-/* =========================
-FETCH
-========================= */
+            <a href="login.html">
+                Log In
+            </a>
 
-self.addEventListener("fetch", event => {
+        </p>
 
-```
-/* Only handle GET requests */
-if (event.request.method !== "GET") {
-    return;
-}
+    </div>
 
-/*
-   HTML pages:
-   Try the internet first so updated pages
-   appear immediately.
-*/
+</div>
 
-if (event.request.mode === "navigate") {
+<script src="script.js"></script>
 
-    event.respondWith(
-
-        fetch(event.request)
-            .then(response => {
-
-                return response;
-
-            })
-            .catch(() => {
-
-                return caches.match(event.request)
-                    .then(cachedResponse => {
-
-                        return cachedResponse ||
-                            caches.match("./index.html");
-
-                    });
-
-            })
-
-    );
-
-    return;
-}
-
-
-/*
-   CSS, JS and other files:
-   Use cache first for offline support.
-*/
-
-event.respondWith(
-
-    caches.match(event.request)
-        .then(cachedResponse => {
-
-            if (cachedResponse) {
-                return cachedResponse;
-            }
-
-            return fetch(event.request)
-                .then(response => {
-
-                    if (
-                        !response ||
-                        response.status !== 200
-                    ) {
-                        return response;
-                    }
-
-                    const responseClone =
-                        response.clone();
-
-                    caches.open(CACHE_NAME)
-                        .then(cache => {
-
-                            cache.put(
-                                event.request,
-                                responseClone
-                            );
-
-                        });
-
-                    return response;
-
-                });
-
-        })
-
-);
-```
-
-});
+</body> </html>
