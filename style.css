@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f5faf7;
+color: #222;
+}
+
+
+
+.index-page {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.index-container {
+padding: 40px;
+}
+
+.index-logo {
+color: #168c5b;
+font-size: 60px;
+font-weight: bold;
+letter-spacing: 4px;
+margin-bottom: 15px;
+}
+
+.index-subtitle {
+color: #777;
+max-width: 550px;
+line-height: 1.6;
+margin-bottom: 30px;
+}
+
+
+.auth-container {
+min-height: 100vh;
+display: flex;
+background: white;
+}
+
+.healthdesk-side {
+width: 50%;
+min-height: 100vh;
+background: #168c5b;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.healthdesk-side h1 {
+font-size: 55px;
+letter-spacing: 3px;
+}
+
+.auth-form {
+width: 50%;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 60px;
+}
+
+.auth-form h2 {
+color: #168c5b;
+font-size: 32px;
+margin-bottom: 25px;
+}
+
+.auth-form label {
+font-size: 14px;
+font-weight: bold;
+margin-top: 15px;
+margin-bottom: 7px;
+}
+
+.auth-form input {
+width: 100%;
+padding: 13px 15px;
+border: 1px solid #d3ddd7;
+border-radius: 7px;
+font-size: 15px;
+outline: none;
+}
+
+.auth-form input:focus {
+border-color: #168c5b;
+}
+
+.auth-form button {
+width: 100%;
+margin-top: 25px;
+padding: 14px;
+border: none;
+border-radius: 7px;
+background: #168c5b;
+color: white;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.auth-form button:hover {
+background: #117449;
+}
+
+.switch-page {
+margin-top: 20px;
+text-align: center;
+color: #777;
+font-size: 14px;
+}
+
+.switch-page a {
+color: #168c5b;
+font-weight: bold;
+text-decoration: none;
+}
+
+
+
+.form-message {
+margin-top: 15px;
+font-size: 14px;
+min-height: 20px;
+}
+
+.form-message.error {
+color: #d93025;
+}
+
+.form-message.success {
+color: #168c5b;
+}
+
+
+.sidebar {
+position: fixed;
+left: 0;
+top: 0;
+width: 240px;
+min-height: 100vh;
+background: #168c5b;
+color: white;
+padding: 25px 20px;
+z-index: 100;
+}
+
+.sidebar-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.sidebar-header h1 {
+font-size: 23px;
+letter-spacing: 1px;
+}
+
+.menu-button {
+width: 42px;
+height: 40px;
+border: none;
+border-radius: 7px;
+background: white;
+color: #168c5b;
+font-size: 23px;
+cursor: pointer;
+}
+
+.menu-button:hover {
+background: #eaf6ef;
+}
+
+.navigation {
+margin-top: 30px;
+}
+
+.navigation a {
+display: block;
+padding: 13px 15px;
+margin-bottom: 7px;
+color: white;
+text-decoration: none;
+border-radius: 7px;
+font-size: 15px;
+}
+
+.navigation a:hover {
+background: #117449;
+}
+
+
+
+.main-content {
+margin-left: 240px;
+min-height: 100vh;
+padding: 50px;
+}
+
+
+.welcome-section {
+background: white;
+padding: 45px;
+border-radius: 12px;
+max-width: 800px;
+box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.small-title {
+color: #168c5b;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+.welcome-section h2 {
+color: #168c5b;
+font-size: 32px;
+margin-bottom: 12px;
+}
+
+.welcome-section p {
+color: #666;
+line-height: 1.6;
+margin-bottom: 25px;
+}
+
+.book-button {
+display: inline-block;
+padding: 14px 20px;
+background: #168c5b;
+color: white;
+text-decoration: none;
+border-radius: 7px;
+font-weight: bold;
+}
+
+.book-button:hover {
+background: #117449;
+}
+
+
+.appointment-container {
+max-width: 650px;
+background: white;
+padding: 35px;
+border-radius: 12px;
+box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-container h2 {
+color: #168c5b;
+font-size: 28px;
+margin-bottom: 8px;
+}
+
+.page-description {
+color: #777;
+margin-bottom: 25px;
+}
+
+.appointment-container label {
+display: block;
+font-size: 14px;
+font-weight: bold;
+margin-top: 17px;
+margin-bottom: 7px;
+}
+
+.appointment-container input,
+.appointment-container select,
+.appointment-container textarea {
+width: 100%;
+padding: 13px;
+border: 1px solid #d3ddd7;
+border-radius: 7px;
+font-size: 15px;
+outline: none;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.appointment-container input:focus,
+.appointment-container select:focus,
+.appointment-container textarea:focus {
+border-color: #168c5b;
+}
+
+.appointment-container textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.appointment-container button {
+width: 100%;
+margin-top: 25px;
+padding: 14px;
+border: none;
+border-radius: 7px;
+background: #168c5b;
+color: white;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.appointment-container button:hover {
+background: #117449;
+}
+
+.my-appointment-container {
+min-height: 80vh;
+}
+
+.my-appointment-container h2 {
+color: #168c5b;
+font-size: 30px;
+margin-bottom: 25px;
+}
+
+.empty-appointment {
+min-height: 65vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.faded-healthdesk {
+color: #168c5b;
+opacity: 0.15;
+font-size: 70px;
+font-weight: normal;
+letter-spacing: 4px;
+margin-bottom: 15px;
+}
+
+.empty-appointment p {
+color: #999;
+}
+
+
+.appointment-card {
+background: white;
+max-width: 700px;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-card h3 {
+color: #168c5b;
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.appointment-status {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 20px;
+background: #eaf6ef;
+color: #168c5b;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.appointment-detail {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+padding: 15px 0;
+border-bottom: 1px solid #edf1ee;
+}
+
+.appointment-detail span {
+color: #777;
+}
+
+.appointment-detail strong {
+color: #222;
+text-align: right;
+}
+
+.cancel-button {
+width: 100%;
+margin-top: 25px;
+padding: 13px;
+border: 1px solid #d93025;
+border-radius: 7px;
+background: white;
+color: #d93025;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.cancel-button:hover {
+background: #fff3f2;
+}
+
+
+@media (max-width: 640px) {
+
+
+.auth-container {
+    flex-direction: column;
+}
+
+.healthdesk-side {
+    width: 100%;
+    min-height: 30vh;
+}
+
+.healthdesk-side h1 {
+    font-size: 38px;
+}
+
+.auth-form {
+    width: 100%;
+    min-height: 70vh;
+    padding: 35px 25px;
+}
+
+
+.sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 18px 20px;
+}
+
+.sidebar-header h1 {
+    font-size: 21px;
+}
+
+.navigation {
+    display: none;
+    margin-top: 20px;
+}
+
+.navigation.show {
+    display: block;
+}
+
+
+.main-content {
+    margin-left: 0;
+    padding: 25px 20px;
+}
+
+
+.welcome-section {
+    padding: 30px 25px;
+}
+
+.welcome-section h2 {
+    font-size: 26px;
+}
+
+
+.appointment-container {
+    padding: 25px 20px;
+}
+
+
+.faded-healthdesk {
+    font-size: 42px;
+}
+
+
+.appointment-detail {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.appointment-detail strong {
+    text-align: left;
+}
+
+
+.index-logo {
+    font-size: 40px;
+}
+
+}

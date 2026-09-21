@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthDesk - Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+```
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+        <h1>HEALTHDESK</h1>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+    </div>
+
+    <nav class="navigation" id="navigation">
+        <a href="dashboard.html">Home</a>
+        <a href="myappointment.html">Appointment</a>
+    </nav>
+
+</aside>
+
+<main class="main-content">
+
+    <div class="appointment-container">
+
+        <h2>Book an Appointment</h2>
+
+        <p class="page-description">
+            Fill in the information below to request an appointment.
+        </p>
+
+        <form id="appointmentForm">
+
+            <label for="appointmentType">
+                Appointment Type
+            </label>
+
+            <select id="appointmentType" required>
+                <option value="">Select appointment type</option>
+                <option value="Public">Public</option>
+                <option value="Private">Private</option>
+            </select>
+
+
+            <label for="appointmentDate">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="appointmentDate"
+                required
+            >
+
+
+            <label for="appointmentTime">
+                Time
+            </label>
+
+            <input
+                type="time"
+                id="appointmentTime"
+                required
+            >
+
+
+            <label for="appointmentReason">
+                Reason
+            </label>
+
+            <textarea
+                id="appointmentReason"
+                placeholder="Enter the reason for your appointment"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Confirm Appointment
+            </button>
+
+        </form>
+
+        <p id="appointmentMessage" class="form-message"></p>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
